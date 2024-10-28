@@ -10,7 +10,7 @@ import CoreData
 import AppKit
 
 @objc(MyList)
-class MyList: NSManagedObject {
+class MyList: NSManagedObject, BaseModel {
     
 }
 
