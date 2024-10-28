@@ -13,7 +13,8 @@ protocol BaseModel {
     
     static var viewContext: NSManagedObjectContext { get }
     func save() throws
-    
+    func delete() throws
+    static func byId<T: NSManagedObject>(id: NSManagedObjectID) -> T?
 }
 
 extension BaseModel where Self: NSManagedObject {
@@ -23,5 +24,14 @@ extension BaseModel where Self: NSManagedObject {
     
     func save() throws {
         try Self.viewContext.save()
+    }
+    
+    func delete() throws {
+        Self.viewContext.delete(self)
+        try save()
+    }
+    
+    static func byId<T>(id: NSManagedObjectID) -> T? {
+        viewContext.object(with: id) as? T
     }
 }
