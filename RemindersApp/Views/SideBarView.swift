@@ -16,9 +16,7 @@ struct SideBarView: View {
         VStack(alignment: .leading) {
             Text("All Items Count: 4")
             
-            List(1...4, id: \.self) { index in
-                Text("List Item \(index)")
-            }
+            MyListsView(vm: MyListsViewModel(context: context))
             
             Spacer()
             
