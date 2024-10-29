@@ -13,6 +13,8 @@ struct MyListItemsView: View {
             List(1...10, id: \.self) { index in
                 Text("Item: \(index)")
             }
+            
+            AddNewListItemView()
         }
     }
 }
