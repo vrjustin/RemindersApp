@@ -10,7 +10,7 @@ import CoreData
 import AppKit
 
 @objc(MyList)
-class MyList: NSManagedObject, BaseModel {
+public class MyList: NSManagedObject, BaseModel {
     
     static var all: NSFetchRequest<MyList> {
         let request: NSFetchRequest<MyList> = MyList.fetchRequest()
@@ -27,6 +27,7 @@ extension MyList {
 
     @NSManaged public var color: NSColor?
     @NSManaged public var name: String?
+    @NSManaged public var items: NSSet?
 
 }
 
