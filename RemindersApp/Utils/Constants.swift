@@ -11,6 +11,7 @@ struct Constants {
     
     struct Icons {
         static let plusCircle = "plus.circle"
+        static let multiplyCircle = "multiply.circle"
         static let line3HorizontalCircleFill = "line.3.horizontal.circle.fill"
         static let circle = "circle"
         static let circleInsetFilled = "circle.inset.filled"
