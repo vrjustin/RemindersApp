@@ -26,7 +26,7 @@ struct MyListsView: View {
                         
                         MyListItemsView(items: myList.items, onItemAdded: { title, dueDate in
                             vm.saveTo(list: myList, title: title, dueDate: dueDate)
-                        }, onItemDeleted: vm.deleteItem)
+                        }, onItemDeleted: vm.deleteItem, onItemCompleted: vm.markAsCompleted)
                         
                         
                     } label: {
