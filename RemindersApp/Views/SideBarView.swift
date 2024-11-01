@@ -13,9 +13,7 @@ struct SideBarView: View {
     @State private var isPresented: Bool = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text("All Items Count: 4")
-            
+        VStack(alignment: .leading) {            
             MyListsView(vm: MyListsViewModel(context: context))
             
             Spacer()
